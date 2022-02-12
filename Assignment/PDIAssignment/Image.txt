@@ -1,0 +1,131 @@
+/******************************************************
+* Reference: Taken from my submitted worksheet-6.     *
+*******************************************************
+
+CLASS: Image
+
+CLASS FIELDS: originalImage (ARRAY OF TYPE Integer)
+
+CONSTRUCTORS:
+Default:
+    IMPORT: none
+    EXPORT: address of new Image object (You are not required to specify this)
+    ASSERTION: originalImage with initialised values.
+    ALGORITHM:  
+        originalImage :=  {{1,1,1,1},{1,0,0,2},{1,2,1,2},{1,0,0,1}};
+
+Alternate:
+    IMPORT: inOriginalImage (ARRAY OF TYPE Integer)
+    EXPORT: address of new Image object (You are not required to specify this)
+    ASSERTION: Creates the object 
+    ALGORITHM:
+            setOriginalImage <-- inOriginalImage;
+
+Copy:
+    IMPORT: inImage (Image)
+    EXPORT: address of new Image object (You are not required to specify this)
+    ASSERTION: Creates an object with an identical object state as the import.
+    ALGORITHM:  
+        FOR i:=0 TO ARRAY's ROW length INC BY 1
+            FOR j:=0 TO ARRAY's COLUMN length INC BY 1
+                originalImage[i][j] := inImage.getOriginalImage <-- i,j
+            END FOR
+        END FOR
+
+MUTATORS:
+SUBMODULE: setOriginalImage
+    IMPORT: inOriginalImage (ARRAY OF TYPE Integer)
+    EXPORT: none
+    ASSERTION: sets the originalImage to inOriginalImage
+    ALGORITHM: 
+        FOR i:=0 TO ARRAY's ROW length INC BY 1
+            FOR j:=0 TO ARRAY's COLUMN length INC BY 1
+                originalImage[i][j] := inOriginalImage[i][j]
+            END FOR
+        END FOR
+
+
+        
+
+ACCESSORS:
+SUBMODULE: getOriginalImage
+    IMPORT: none
+    EXPORT: originalImage[][] (2D ARRAY OF Integer)
+    ASSERTION: gets originalImage array
+    
+
+SUBMODULE: equals
+    IMPORT: inObj (Object)
+    EXPORT: same (boolean)
+    ASSERTION: Two images are interchangeable if they have the same originalImage
+    ALGORITHM: 
+        same := FALSE
+        icount := 0
+            IF (inObj ISA Image) THEN
+                inImage:= (Convert to Image)inObj
+
+                IF (inImage.originalImage LENGTH EQUALS inOriginalImage LENGTH)
+                FOR i:=0 TO ARRAY's ROW length INC BY 1
+                    FOR j:=0 TO ARRAY's COLUMN length INC BY 1
+     
+                        IF (originalImage[i][j] NOT EQUALS inImage.getOriginalImage <-- none  
+                            same := false
+                        END IF
+                    END FOR
+                END FOR
+            
+            ELSE
+            END IF
+    END equals.
+
+SUBMODULE: clone
+    IMPORT: none
+    EXPORT: cloneImage (Object)
+    ASSERTION: Returns a cloned object of the current object
+    ALGORITHM: 
+        CONSTRUCT cloneImage USING COPY CONSTRUCTOR WITH THIS OBJECT
+
+SUBMODULE toString
+    IMPORT: none
+    EXPORT: aString(String)
+    ASSERTION:
+    ALGORITHM: 
+        aString := SPACE
+        FOR row:=0 TO originalImage's ROW Length INC BY 1
+            FOR col:=0 TO originalImage's COLUMN Length INC BY 1
+            aString := aString + SPACE + originalImage[row][col]
+        aString := aString + NEW LINE
+
+SUBMODULE convolution
+    IMPORT: kernel(2D ARRAY OF TYPE Integer
+    EXPORT: result(2D ARRAY OF TYPE Integer
+    ASSERTION: performs calculation on imported kernel matrix and original matrix.
+    ALGORITHM:
+result (TWO DIMENSIONAL ARRAY OF Integer OF SIZE [originalImage's COLUMN SIZE-LENGTH OF kernel+1][originalImage's ROW SIZE-LENGTH OF kernel+1]  
+    IF(validateOriginalImage <-- originalImage, kernel) THEN
+      FOR r:=0 TO LENGTH OF originalImage's COLUMN-LENGTH OF kernel+1 INC BY 1
+        FOR l:=0 TO LENGTH OF orginalImage's's ROW-LENGTH OF kernel+1 INC BY 1
+            FOR S:=0 TO LENGTH OF kernel INC BY 1
+                FOR q:=0 TO LENGTH OF kernel INC BY 1
+                    result[r][l]=result[r][l]+(originalImage[r+s][l+q]*kernel[s][q])
+                END FOR
+            END FOR
+        END FOR
+     END FOR
+    
+
+    ELSE
+        THROW IllegalArgumentException <-- "Invalid original image"
+    END IF
+
+PRIVATE SUBMODULES:
+
+SUBMODULE: validateOriginalImage
+    IMPORT: originalImage(2D ARRAY OF Integer), kernel(2D ARRAY OF Integer)
+    EXPORT: valid (boolean)
+    ASSERTION: originalImage matrix's size must be greater than or equal to Kernel matrix's size.
+    ALGORITHM: 
+        valid := (((originalImage ROW LENGTH >= kernel LENGTH) AND (originalImage COLUMN LENGTH >= kernel LENGTH));
+
+
+

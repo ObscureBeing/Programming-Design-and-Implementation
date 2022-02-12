@@ -1,0 +1,20 @@
+ERRORS, REDUNDANCY, INEFFICIENCY
+_______________________________________________________________________________________________________________________________________________
+
+1) line 2 : WHILE x < 1 AND x > 10 DO
+        Error because x can not be both less than 1 and greater than 10 at the same time.
+        This is a logical error and the while loop runs infinite time.
+
+2) Line 5 : sum = sum + x
+        Error because variable sum is not initialised.
+
+3) line 7 : mean = sum / count
+        Inefficiency because count is 0 which is integer. It will give run time error.
+        This can be re-written in a different way to same job as original piece of code by replacing value of count to 0.0.
+        This will be float and will output Infinity.
+
+4) line 7 : mean = sum / count
+        Error because variable mean is not initialised.
+
+_______________________________________________________________________________________________________________________________________________
+

@@ -1,0 +1,31 @@
+START DetectEdges
+
+    START MAIN
+    result := null
+    UserInterface.display <-- "=> Import Image. NEWLINE"
+    mainImage := Menu.importImage <-- sc
+    myImage(Image) := Image <-- mainImage
+
+    UserInterface.display <-- "=> Import Kernel NEWLINE"
+    kernel := Menu.importKernel <-- sc
+
+    UserInterface.display <--"=> Ehich operation you want to perform? NEWLINE"
+
+    UserInterface.display <-- "1.Convolution NEWLINE"
+    UserInterface.display <-- "2.Smoothing NEWLINE"
+    operation := UserInterface.userInput <-- SPACE, 1, 2
+
+    CASE operation
+     1: 
+     result := Menu.convolution <-- myImage, kernel
+     
+     2:
+     result := Menu.smoothing <-- myImage
+    END CASE
+
+    UserInterface.display <-- "=> Export Image NEWLINE"
+    Menu.exportImage <-- result, sc
+    END MAIN
+
+END DetectEdges
+     

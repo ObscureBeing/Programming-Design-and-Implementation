@@ -1,0 +1,174 @@
+CLASS: Date
+
+
+CLASS FIELDS: day (Integer)
+              month (Integer)
+              year (Integer)
+
+CONSTRUCTORS:
+Default:
+    IMPORT: none
+    EXPORT: address of new Date object (You are not required to specify this)
+    ASSERTION: sets deafult values of the class fields.
+    ALGORITHM:  
+        day := 01
+        month := 01
+        year := 2000
+
+Alternate:
+    IMPORT: inDay (Integer), inMonth (Integer), inYear (Integer)
+    EXPORT: address of new Date object (You are not required to specify this)
+    ASSERTION: Creates the object if the imports are valid and FAILS otherwise
+    ALGORITHM:
+            day := inDay
+            month := inMonth
+            year := inYear
+
+Copy:
+    IMPORT: inDate (Date)
+    EXPORT: address of new Date object (You are not required to specify this)
+    ASSERTION: Creates an object with an identical object state as the import.
+    ALGORITHM:  
+        day := inDate.getDay <- none
+        month := inDate.getMonth <- none
+        year := inDate.getYear <- none
+
+MUTATORS:
+SUBMODULE: setDay
+    IMPORT: inDay(Integer), inMonth(Integer), inYear(Integer)
+    EXPORT: none
+    ASSERTION: sets the day to inDay
+    ALGORITHM: 
+        IF (validatDay <-- inDay, inMonth, inYear
+            day := inDay
+        ELSE
+            THROW inavlid argument exception
+        END IF
+
+
+SUBMODULE: setMonth
+    IMPORT: inMonth(Integer)
+    EXPORT: none
+    ASSERTION: sets the current month if valid and FAILS otherwise.
+    ALGORITHM: 
+        IF (validateMonth <- inMonth) THEN
+            month := inMonth
+        ELSE
+            THROW invalid argument exception
+        END IF
+
+SUBMODULE: setRYear
+    IMPORT: inYear (Integer)
+    EXPORT: none
+    ASSERTION: sets the year if valid and FAILS otherwise.
+    ALGORITHM:
+            year := inYear
+
+
+
+ACCESSORS:
+SUBMODULE: getDay
+    IMPORT: none
+    EXPORT: day
+
+SUBMODULE: getMonth
+    IMPORT: none
+    EXPORT: month
+
+SUBMODULE: getYear
+    IMPORT: none
+    EXPORT: year
+
+SUBMODULE: equals
+    IMPORT: inObj (Object)
+    EXPORT: same (boolean)
+    ASSERTION: Two dates are interchangeable if they haave same day, month and year.
+    ALGORITHM: 
+        same := FALSE
+            IF (inObj ISA Wheel) THEN
+                inDate:= (Convert to Date)inObj
+                same := (day == inDate.getDay <- none) AND 
+                        (month == inDate.getMonth <- none) AND (year == inDate.getYear <-- none)
+            ENDIF
+
+SUBMODULE: clone
+    IMPORT: none
+    EXPORT: cloneDatw (Object)
+    ASSERTION: Returns a cloned object of the current object
+    ALGORITHM: 
+        CONSTRUCT cloneWheel USING COPY CONSTRUCTOR WITH THIS OBJECT
+
+SUBMODULE toString
+    IMPORT: none
+    EXPORT: str
+    ASSERTION:
+    ALGORITHM: 
+        str = "Day: " + day + "Month: " + month + 
+                     "Year " + year 
+SUBMODULE: isLeapYear
+    IMPORT: year(Integer)
+    EXPORT: leap(boolean)
+    ASSERTION: will check is year is a leap year or not
+    ALGORITHM:
+        IF (year MOD 400 EQUALS 0) OR (year MOD 4 EQUALS 0) AND (yearr MOD 100 NOT EQUALS 0)
+            leap := true
+        END IF
+        
+    END isLeapYear
+
+PRIVATE SUBMODULES:
+
+SUBMODULE:
+    IMPORT: none
+    EXPORT: subFileName(String)
+    ASSERTION: will return a string with  formatted date.
+    ALGORITHM:
+        IF (day < 10 AND month < 10)
+            subFileName := year + "-0" + month + "-0" + day
+        ELSE IF (day  < 10)
+            subFileName  := year + "-" + month + "-0" + day
+        ELSE IF(month < 10)
+            subFileName := year + "-0" + month + "-" + day
+        ELSE
+            subFileName := year + "-" + month + "-" + day
+        END IF
+
+    END toFileString
+
+SUBMODULE: validateDay
+    IMPORT: inDay (Integer), inMonth(Integer), inYear(Integer)
+    EXPORT: valid (boolean)
+    ASSERTION: day will be validated according to the month and year.
+    ALGORITHM: 
+    IF(validateMonth <-- inMonth)
+        CASE inMonth
+            1: 3: 5: 7: 8: 10: 12:
+                IF(inDay >= 01 AND inDay <=31)
+                    valid := true;
+                END IF
+            2:
+                IF(isLeapYear <-- inYear AND (inDay >= 01 AND inDay <=29)
+                    valid := true
+                ELSE IF(NOT isLeapYear <-- inYear) AND (inDay >= 01 AND inDay <= 28)
+                    valid := true
+                ELSE
+
+                END IF
+            
+            4: 6: 9: 11:
+                IF(inDay >= 01 AND inDay <= 30)
+                    valid := true
+    
+        END CASE
+    ELSE
+        THROW illegal argument EXCEPTION
+END validateDay.
+
+
+SUBMODULE: validateMonth
+    IMPORT: inMonth (Integer)
+    EXPORT: valid (boolean)
+    ASSERTION: month must be between 1 and 12 (inclusive).
+    ALGORITHM: 
+        valid := (inMonth >= 01) AND (inMonth <= 12)
+END Date

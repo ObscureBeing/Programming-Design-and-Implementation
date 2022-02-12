@@ -1,0 +1,1003 @@
+ 1100  add Maze.java 
+ 1101  git add Maze.java 
+ 1102  git status
+ 1103  git commit -m commitnew
+ 1104  git status
+ 1105  vim Maze.java 
+ 1106  git add Maze.java 
+ 1107  git commit -m commitanother
+ 1108  git status
+ 1109  git log --branches --graph
+ 1110  git log
+ 1111  git log --updating_maze
+ 1112  git log --branches
+ 1113  got --branches --graph
+ 1114  git --branches --graph
+ 1115  git log --branches --graph
+ 1116  git log --branches
+ 1117  git branch
+ 1118  git checkout master
+ 1119  git branch 
+ 1120  git merge updating_maze
+ 1121  git merge updating_messages 
+ 1122  vim Maze.java 
+ 1123  git log --branches --graph
+ 1124  git merge updating_maze
+ 1125  git log 
+ 1126  git log --branches --graph
+ 1127  git tag archive/updating_maze updating_maze
+ 1128  git tag archive/updating_messages updating_messages
+ 1129  git branch -d updating_maze
+ 1130  git branch -d updating_messages
+ 1131  clear
+ 1132  cd Documents/PDI/P05
+ 1133  cd PondCalculator/
+ 1134  vim PondCalculator.java 
+ 1135  clear
+ 1136  git branch if_replace
+ 1137  clear
+ 1138  cd Documents/PDI/P05/PondCalculator/
+ 1139  cd ..
+ 1140  ls 
+ 1141  cd MyProject/
+ 1142  ls
+ 1143  git branch
+ 1144  git branch if_replace
+ 1145  git branch rename_vars
+ 1146  git branch 
+ 1147  git checkout if_replace 
+ 1148  git  branch 
+ 1149  vim Maze.java 
+ 1150  git add Maze.java 
+ 1151  git status
+ 1152  git commit -m firstconflictcommit
+ 1153  git status
+ 1154  git branch
+ 1155  git checkout rename_vars 
+ 1156  vim Maze.java 
+ 1157  git add Maze.java 
+ 1158  git status
+ 1159  git commit -m secondconflictcommit
+ 1160  git status
+ 1161  git checkout master
+ 1162  git merge if_replace 
+ 1163  git merge rename_vars 
+ 1164  git status
+ 1165  vim Maze.java 
+ 1166  git add Maze.java 
+ 1167  git commit -m solvedconflictcommit
+ 1168  git status
+ 1169  git log --branch --graph
+ 1170  git log --branches --graph
+ 1171  clear
+ 1172  cd Documents/
+ 1173  cd MyProject/
+ 1174  ls
+ 1175  git remote add origin https://github.com/muskanvig/version-control-worksheet
+ 1176  git remote -v
+ 1177  git push -u origin master
+ 1178  git push --help
+ 1179  git push 
+ 1180  git push -u origin master
+ 1181  git branch
+ 1182  git push -u origin master
+ 1183  git push master
+ 1184  git push origin master
+ 1185  git fetch origin master
+ 1186  git push -u origin master
+ 1187  clear
+ 1188  cd Documents/PDI/P05
+ 1189  cd PondCalculator/
+ 1190  vim PondCalculator
+ 1191  vim PondCalculator.java 
+ 1192  javac PondCalculator.java 
+ 1193  java PondCalculator 
+ 1194  vim PondCalculator.java 
+ 1195  javac PondCalculator.java 
+ 1196  vim PondCalculator.java 
+ 1197  javac PondCalculator.java 
+ 1198  java PondCalculator
+ 1199  vim PondCalculator.java 
+ 1200  javac PondCalculator.java 
+ 1201  java PondCalculator
+ 1202  vim PondCalculator.java 
+ 1203  javac PondCalculator.java 
+ 1204  java PondCalculator
+ 1205  vim PondCalculator.java 
+ 1206  javac PondCalculator.java 
+ 1207  java PondCalculator
+ 1208  vim PondCalculator.java 
+ 1209  javac PondCalculator.java 
+ 1210  java PondCalculator
+ 1211  vim PondCalculator.java 
+ 1212  javac PondCalculator.java 
+ 1213  java PondCalculator 
+ 1214  vim PondCalculator.java 
+ 1215  javac PondCalculator.java 
+ 1216  java PondCalculator 
+ 1217  vim PondCalculator.java 
+ 1218  javac PondCalculator.java 
+ 1219  java PondCalculator 
+ 1220  vim PondCalculator.java 
+ 1221  clear
+ 1222  cd Documents/PDI/P05
+ 1223  ls
+ 1224  cd Fibonacci/
+ 1225  ls
+ 1226  vim Fibonacci.java 
+ 1227  javac Fibonacci.java 
+ 1228  vim Fibonacci.java 
+ 1229  javac Fibonacci.java 
+ 1230  vim Fibonacci.java 
+ 1231  javac Fibonacci.java 
+ 1232  vim Fibonacci.java 
+ 1233  javac Fibonacci.java 
+ 1234  java Fibonacci 
+ 1235  vim Fibonacci.java 
+ 1236  javac Fibonacci.java 
+ 1237  java Fibonacci 
+ 1238  vim Fibonacci.java 
+ 1239  java Fibonacci 
+ 1240  vim Fibonacci.java 
+ 1241  javac Fibonacci.java 
+ 1242  java Fibonacci 
+ 1243  vim Fibonacci.java 
+ 1244  javac Fibonacci.java 
+ 1245  java Fibonacci 
+ 1246  vim Fibonacci.java 
+ 1247  javac Fibonacci.java 
+ 1248  java Fibonacci 
+ 1249  vim Fibonacci.java 
+ 1250  javac Fibonacci.java 
+ 1251  java Fibonacci 
+ 1252  vim Fibonacci.java 
+ 1253  javac Fibonacci.java 
+ 1254  java Fibonacci 
+ 1255  vim Fibonacci.java 
+ 1256  clear
+ 1257  cd Documents/PDI/P05/Fibonacci/
+ 1258  vim Fibonacci.java 
+ 1259  javac Fibonacci.java 
+ 1260  vim Fibonacci.java 
+ 1261  javac Fibonacci.java 
+ 1262  java Fibonacci 
+ 1263  vim Fibonacci.java 
+ 1264  javac Fibonacci.java 
+ 1265  vim Fibonacci.java 
+ 1266  javac Fibonacci.java 
+ 1267  vim Fibonacci.java 
+ 1268  javac Fibonacci.java 
+ 1269  vim Fibonacci.java 
+ 1270  javac Fibonacci.java 
+ 1271  vim Fibonacci.java 
+ 1272  javac Fibonacci.java 
+ 1273  vim Fibonacci.java 
+ 1274  javac Fibonacci.java 
+ 1275  vim Fibonacci.java 
+ 1276  javac Fibonacci.java 
+ 1277  vim Fibonacci.java 
+ 1278  javac Fibonacci.java 
+ 1279  vim Fibonacci.java 
+ 1280  javac Fibonacci.java 
+ 1281  java Fibonacci 
+ 1282  :
+ 1283  clear
+ 1284  cd Documents/PDI/P05/
+ 1285  cd Fibonacci/
+ 1286  vim Fibonacci
+ 1287  vim Fibonacci.java 
+ 1288  javac Fibonacci.java
+ 1289  java Fibonacci 
+ 1290  vim Fibonacci.java 
+ 1291  javac Fibonacci.java
+ 1292  java Fibonacci 
+ 1293  vim Fibonacci.java 
+ 1294  javac Fibonacci.java
+ 1295  vim Fibonacci.java 
+ 1296  javac Fibonacci.java
+ 1297  java Fibonacci 
+ 1298  vim Fibonacci.java 
+ 1299  javac Fibonacci.java
+ 1300  vim Fibonacci.java 
+ 1301  javac Fibonacci.java
+ 1302  java Fibonacci 
+ 1303  vim Fibonacci.java 
+ 1304  javac Fibonacci.java
+ 1305  java Fibonacci 
+ 1306  vim Fibonacci.java 
+ 1307  javac Fibonacci.java
+ 1308  java Fibonacci 
+ 1309  vim Fibonacci.java 
+ 1310  java Fibonacci 
+ 1311  vim Fibonacci.java 
+ 1312  javac Fibonacci.java
+ 1313  java Fibonacci 
+ 1314  vim Fibonacci.java 
+ 1315  javac Fibonacci.java
+ 1316  java Fibonacci 
+ 1317  vim Fibonacci.java 
+ 1318  clear
+ 1319  cd Documents/PDI/P05
+ 1320  ls
+ 1321  cd Fibonacci/
+ 1322  ls
+ 1323  vim Fibonacci
+ 1324  vim Fibonacci.java 
+ 1325  cd ..
+ 1326  ls
+ 1327  cd PondCalculator/
+ 1328  ls
+ 1329  vim PondCalculator.java 
+ 1330  cd ..
+ 1331  cd P04
+ 1332  ls
+ 1333  vim Menu.java 
+ 1334  cd ..
+ 1335  cd P05
+ 1336  ls
+ 1337  mkdir Euler
+ 1338  ls
+ 1339  cd Euler/
+ 1340  vim Euler.java
+ 1341  vim Euler.txt
+ 1342  ls
+ 1343  mkdir PI
+ 1344  ls
+ 1345  rm -rf PI
+ 1346  ls
+ 1347  cd ..
+ 1348  mkdir PI
+ 1349  ls
+ 1350  cd PI
+ 1351  vim PI.java
+ 1352  vim PI.txt
+ 1353  ls
+ 1354  cd ..
+ 1355  ls
+ 1356  mkdir Permutations
+ 1357  vim Permutations.java
+ 1358  vim Permutations.txt
+ 1359  ls
+ 1360  rm Permutations.java 
+ 1361  rm Permutations.txt 
+ 1362  ls
+ 1363  cd Permutations/
+ 1364  vim Permutations.java
+ 1365  vim Permutations.txt
+ 1366  ls
+ 1367  cd ..
+ 1368  ls
+ 1369  mkdir AssignmentTask
+ 1370  ls
+ 1371  cd AssignmentTask/
+ 1372  vim Convolutions.txt
+ 1373  vim Convolutions_Test.txt
+ 1374  ls
+ 1375  vim Convolutions.java
+ 1376  ls
+ 1377  cd ..
+ 1378  ls
+ 1379  clear
+ 1380  cd Documents/
+ 1381  ls
+ 1382  cd MyProject/
+ 1383  ls
+ 1384  git branch
+ 1385  git --branches --graph
+ 1386  git log --branches --graph
+ 1387  git remote add https://github.com/muskanvig/version-control.git
+ 1388  git remote -v
+ 1389  git push -u origin master
+ 1390  git pull 
+ 1391  git push -u origin master
+ 1392  git push -u --force origin master
+ 1393  git log
+ 1394  git remote add https://github.com/muskanvig/version-control.git
+ 1395  clear
+ 1396  cd Documents/PDI/P05
+ 1397  ls
+ 1398  cd AssignmentTask/
+ 1399  ls
+ 1400  cd .. 
+ 1401  cd ..
+ 1402  cd P04
+ 1403  ls
+ 1404  cd A
+ 1405  vim MatrixMultiplication.java 
+ 1406  cp MatrixMultiplication.java /home/19983530/Documents/PDI/P05/AssignmentTask/
+ 1407  cd ../P05
+ 1408  ls
+ 1409  cd AssignmentTask/
+ 1410  ls
+ 1411  vim MatrixMultiplication.java 
+ 1412  clear
+ 1413  cd Documents/PDI/P05/AssignmentTask/
+ 1414  ls
+ 1415  clear
+ 1416  cd Documents/PDI/P05/AssignmentTask/
+ 1417  ls
+ 1418  vim MatrixMultiplication.java 
+ 1419  javac MatrixMultiplication.java 
+ 1420  vim MatrixMultiplication.java 
+ 1421  javac MatrixMultiplication.java 
+ 1422  java MatrixMultiplication 
+ 1423  vim MatrixMultiplication.java 
+ 1424  javac MatrixMultiplication.java 
+ 1425  java MatrixMultiplication 
+ 1426  vim MatrixMultiplication.java 
+ 1427  javac MatrixMultiplication.java 
+ 1428  java MatrixMultiplication 
+ 1429  vim MatrixMultiplication.java 
+ 1430  clear
+ 1431  cd Documents/PDI/P05
+ 1432  cd AssignmentTask/
+ 1433  ls
+ 1434  vim MatrixMultiplication.java 
+ 1435  javac MatrixMultiplication.java 
+ 1436  java MatrixMultiplication 
+ 1437  vim MatrixMultiplication.java 
+ 1438  vim Convolut
+ 1439  vim Convolute.java 
+ 1440  vim Kernel.java 
+ 1441  vim MatrixMultiplication.java 
+ 1442  javac MatrixMultiplication.java 
+ 1443  java MatrixMultiplication 
+ 1444  vim MatrixMultiplication.java 
+ 1445  javac MatrixMultiplication.java 
+ 1446  vim MatrixMultiplication.java 
+ 1447  javac MatrixMultiplication.java 
+ 1448  vim MatrixMultiplication.java 
+ 1449  javac MatrixMultiplication.java 
+ 1450  vim MatrixMultiplication.java 
+ 1451  javac MatrixMultiplication.java 
+ 1452  vim MatrixMultiplication.java 
+ 1453  claer
+ 1454  clear
+ 1455  cd Documents/PDI/P05/
+ 1456  ls
+ 1457  mkdir Euler
+ 1458  cd Euler/
+ 1459  ls
+ 1460  vin Euler.
+ 1461  vin Euler.java 
+ 1462  vim Euler.java 
+ 1463  javac Euler.java 
+ 1464  java Euler 
+ 1465  vim Euler.java 
+ 1466  java Euler 
+ 1467  vim Euler.java 
+ 1468  javac Euler.java 
+ 1469  vim Euler.java 
+ 1470  javac Euler.java 
+ 1471  vim Euler.java 
+ 1472  javac Euler.java 
+ 1473  vim Euler.java 
+ 1474  javac Euler.java 
+ 1475  vim Euler.java 
+ 1476  javac Euler.java 
+ 1477  vim Euler.java 
+ 1478  javac Euler.java 
+ 1479  vim Euler.java 
+ 1480  javac Euler.java 
+ 1481  vim Euler.java 
+ 1482  javac Euler.java 
+ 1483  vim Euler.java 
+ 1484  javac Euler.java 
+ 1485  vim Euler.java 
+ 1486  javac Euler.java 
+ 1487  vim Euler.java 
+ 1488  javac Euler.java 
+ 1489  vim Euler.java 
+ 1490  javac Euler.java 
+ 1491  vim Euler.java 
+ 1492  javac Euler.java 
+ 1493  java Euler
+ 1494  4
+ 1495  java Euler
+ 1496  vim Euler.java 
+ 1497  javac Euler.java 
+ 1498  vim Euler.java 
+ 1499  javac Euler.java 
+ 1500  vim Euler.java 
+ 1501  javac Euler.java 
+ 1502  java Euler
+ 1503  vim Euler.java 
+ 1504  cd ..
+ 1505  cd P04
+ 1506  ls
+ 1507  vim ElementSearch.
+ 1508  vim ElementSearch.java 
+ 1509  cd ..
+ 1510  cd P05
+ 1511  ls
+ 1512  cd Euler/
+ 1513  vim Euler.
+ 1514  vim Euler.java 
+ 1515  clear
+ 1516  cd Documents/PDI/P05
+ 1517  vim Euler.java 
+ 1518  rm .Euler.java.swp 
+ 1519  vim Euler.java 
+ 1520  cd ..
+ 1521  ls
+ 1522  cd Euler/
+ 1523  vim e
+ 1524  clear
+ 1525  cd Documents/PDI/P05/
+ 1526  ls
+ 1527  cd Euler/
+ 1528  vim Euler.java 
+ 1529  javac Euler.java 
+ 1530  vim Euler.java 
+ 1531  javac Euler.java 
+ 1532  vim Euler.java 
+ 1533  javac Euler.java 
+ 1534  vim Euler.java 
+ 1535  javac Euler.java 
+ 1536  vim Euler.java 
+ 1537  javac Euler.java 
+ 1538  java Euler 
+ 1539  vim Euler.java 
+ 1540  javac Euler.java 
+ 1541  java Euler 
+ 1542  vim Euler.java 
+ 1543  javac Euler.java 
+ 1544  vim Euler.java 
+ 1545  javac Euler.java 
+ 1546  vim Euler.java 
+ 1547  javac Euler.java 
+ 1548  java Euler 
+ 1549  vim Euler.java 
+ 1550  javac Euler.java 
+ 1551  java Euler 
+ 1552  5
+ 1553  java Euler 
+ 1554  vim Euler.java 
+ 1555  5
+ 1556  javac Euler.java 
+ 1557  java Euler 
+ 1558  5
+ 1559  java Euler 
+ 1560  vim Euler.java 
+ 1561  javac Euler.java 
+ 1562  java Euler 
+ 1563  cd ..
+ 1564  cd Euler/
+ 1565  ls
+ 1566  rm Euler.txt
+ 1567  ls
+ 1568  cd ..
+ 1569  ls
+ 1570  cd Fibonacci/
+ 1571  ls
+ 1572  rm Fibonacci.txt 
+ 1573  ls
+ 1574  rm Fibonacci_Test.txt 
+ 1575  ls
+ 1576  cd ..
+ 1577  ls
+ 1578  cd Permutations/
+ 1579  ls
+ 1580  rm Permutations.txt 
+ 1581  ls
+ 1582  cd ..
+ 1583  ls
+ 1584  cd PI
+ 1585  ls
+ 1586  rm PI.txt 
+ 1587  ls
+ 1588  cd ..
+ 1589  ls
+ 1590  cd PondCalculator/
+ 1591  ls
+ 1592  rm PondCalculator.txt 
+ 1593  rm PondCalculator_Test.txt 
+ 1594  ls
+ 1595  cd ..
+ 1596  clear
+ 1597  cd PondCalculator/
+ 1598  vim PondCalculator.java 
+ 1599  javac PondCalculator.java 
+ 1600  java PondCalculator 
+ 1601  cd ...
+ 1602  cd ..
+ 1603  ls
+ 1604  clear
+ 1605  cd Documents/PDI/P05
+ 1606  ls
+ 1607  rm Permutations/
+ 1608  rm -rf Per
+ 1609  rm -rf Permutations/
+ 1610  rm -rf PI
+ 1611  ls
+ 1612  clear
+ 1613  cd Documents/PDI/P05
+ 1614  ls
+ 1615  cd AssignmentTask/
+ 1616  ls
+ 1617  vim Convolutions.java 
+ 1618  clear
+ 1619  cd Documents/PDI/P05
+ 1620  ls
+ 1621  cd AssignmentTask/
+ 1622  ls
+ 1623  rm Convolutions.java 
+ 1624  ls
+ 1625  rm MatrixMultiplication.java 
+ 1626  ls
+ 1627  rm MatrixMultiplication.class 
+ 1628  ls
+ 1629  cd ..
+ 1630  mv Convolutions1.java /home/19983530/Documents/PDI/P05/AssignmentTask/
+ 1631  cd AssignmentTask/
+ 1632  ls
+ 1633  mv Convolutions1.java /home/19983530/Documents/PDI/P05/AssignmentTask/Convolutions.java
+ 1634  ls
+ 1635  vim Convolutions.java 
+ 1636  javac Convolutions.java 
+ 1637  vim Convolutions.java 
+ 1638  javac Convolutions.java 
+ 1639  vim Convolutions.java 
+ 1640  javac Convolutions.java 
+ 1641  java Convolutions 
+ 1642  vim Convolutions.java 
+ 1643  javac Convolutions.java 
+ 1644  java Convolutions 
+ 1645  vim Convolutions.java 
+ 1646  javac Convolutions.java 
+ 1647  vim Convolutions.java 
+ 1648  javac Convolutions.java 
+ 1649  java Convolutions 
+ 1650  vim Convolutions.java 
+ 1651  javac Convolutions.java 
+ 1652  vim Convolutions.java 
+ 1653  java Convolutions 
+ 1654  vim Convolutions.java 
+ 1655  javac Convolutions.java 
+ 1656  vim Convolutions.java 
+ 1657  clear
+ 1658  cd Documents/PDI/P05/AssignmentTask/
+ 1659  vim Convolutions.java 
+ 1660  javac Convolutions.java 
+ 1661  java Convolutions 
+ 1662  vim Convolutions.java 
+ 1663  javac Convolutions.java 
+ 1664  vim Convolutions.java 
+ 1665  javac Convolutions.java 
+ 1666  vim Convolutions.java 
+ 1667  javac Convolutions.java 
+ 1668  java Convolutions 
+ 1669  vim Convolutions.java 
+ 1670  javac Convolutions.java 
+ 1671  java Convolutions 
+ 1672  vim Convolutions.java 
+ 1673  javac Convolutions.java 
+ 1674  java Convolutions 
+ 1675  vim Convolutions.java 
+ 1676  javac Convolutions.java 
+ 1677  java Convolutions 
+ 1678  vim Convolutions.java 
+ 1679  clear
+ 1680  cd Documents/PDI/P05/AssignmentTask/
+ 1681  vim Convolutions.java 
+ 1682  javac Convolutions.java 
+ 1683  java Convolutions 
+ 1684  vim Convolutions.java 
+ 1685  javac Convolutions.java 
+ 1686  java Convolutions 
+ 1687  vim Convolutions.java 
+ 1688  javac Convolutions.java 
+ 1689  java Convolutions 
+ 1690  vim Convolutions.java 
+ 1691  javac Convolutions.java 
+ 1692  java Convolutions 
+ 1693  clear
+ 1694  cd Documents/PDI/P05/a
+ 1695  cd Documents/PDI/P05/AssignmentTask/
+ 1696  vim Convolutions.java 
+ 1697  javac Convolutions.java 
+ 1698  vim Convolutions.java 
+ 1699  javac Convolutions.java 
+ 1700  java Convolutions 
+ 1701  vim Convolutions.java 
+ 1702  javac Convolutions.java 
+ 1703  vim Convolutions.java 
+ 1704  javac Convolutions.java 
+ 1705  java Convolutions 
+ 1706  vim Convolutions.java 
+ 1707  javac Convolutions.java 
+ 1708  java Convolutions 
+ 1709  vim Convolutions.java 
+ 1710  javac Convolutions.java 
+ 1711  java Convolutions 
+ 1712  vim Convolutions.java 
+ 1713  javac Convolutions.java 
+ 1714  java Convolutions 
+ 1715  vim Convolutions.java 
+ 1716  javac Convolutions.java 
+ 1717  java Convolutions 
+ 1718  vim Convolutions.java 
+ 1719  javac Convolutions.java 
+ 1720  java Convolutions 
+ 1721  vim Convolutions.java 
+ 1722  javac Convolutions.java 
+ 1723  java Convolutions 
+ 1724  vim Convolutions.java 
+ 1725  javac Convolutions.java 
+ 1726  java Convolutions 
+ 1727  vim Convolutions.java 
+ 1728  javac Convolutions.java 
+ 1729  java Convolutions 
+ 1730  vim Convolutions.java 
+ 1731  javac Convolutions.java 
+ 1732  java Convolutions 
+ 1733  vim Convolutions.java 
+ 1734  javac Convolutions.java 
+ 1735  java Convolutions 
+ 1736  clear
+ 1737  cd Documents/PDI/P05/AssignmentTask/
+ 1738  cp Convolutions.java /home/19983530/Documents/PDI/P05/AssignmentTask/ConvolutionsModule.java
+ 1739  ls
+ 1740  vim ConvolutionsModule.java 
+ 1741  javac ConvolutionsModule.java 
+ 1742  vim ConvolutionsModule.java 
+ 1743  javac ConvolutionsModule.java 
+ 1744  vim ConvolutionsModule.java 
+ 1745  javac ConvolutionsModule.java 
+ 1746  vim ConvolutionsModule.java 
+ 1747  javac ConvolutionsModule.java 
+ 1748  vim ConvolutionsModule.java 
+ 1749  javac ConvolutionsModule.java 
+ 1750  vim ConvolutionsModule.java 
+ 1751  javac ConvolutionsModule.java 
+ 1752  vim ConvolutionsModule.java 
+ 1753  javac ConvolutionsModule.java 
+ 1754  vim ConvolutionsModule.java 
+ 1755  javac ConvolutionsModule.java 
+ 1756  vim ConvolutionsModule.java 
+ 1757  javac ConvolutionsModule.java 
+ 1758  vim ConvolutionsModule.java 
+ 1759  javac ConvolutionsModule.java 
+ 1760  vim ConvolutionsModule.java 
+ 1761  javac ConvolutionsModule.java 
+ 1762  vim ConvolutionsModule.java 
+ 1763  javac ConvolutionsModule.java 
+ 1764  vim ConvolutionsModule.java 
+ 1765  javac ConvolutionsModule.java 
+ 1766  vim ConvolutionsModule.java 
+ 1767  javac ConvolutionsModule.java 
+ 1768  vim ConvolutionsModule.java 
+ 1769  javac ConvolutionsModule.java 
+ 1770  vim ConvolutionsModule.java 
+ 1771  javac ConvolutionsModule.java 
+ 1772  vim ConvolutionsModule.java 
+ 1773  javac ConvolutionsModule.java 
+ 1774  java ConvolutionsModule
+ 1775  vim ConvolutionsModule.java 
+ 1776  javac ConvolutionsModule.java 
+ 1777  vim ConvolutionsModule.java 
+ 1778  javac ConvolutionsModule.java 
+ 1779  vim ConvolutionsModule.java 
+ 1780  javac ConvolutionsModule.java 
+ 1781  vim ConvolutionsModule.java 
+ 1782  javac ConvolutionsModule.java 
+ 1783  vim ConvolutionsModule.java 
+ 1784  javac ConvolutionsModule.java 
+ 1785  vim ConvolutionsModule.java 
+ 1786  javac ConvolutionsModule.java 
+ 1787  vim ConvolutionsModule.java 
+ 1788  javac ConvolutionsModule.java 
+ 1789  vim ConvolutionsModule.java 
+ 1790  javac ConvolutionsModule.java 
+ 1791  vim ConvolutionsModule.java 
+ 1792  clear
+ 1793  cd Documents/PDI/P05/AssignmentTask/
+ 1794  vim ConvolutionsModule.java 
+ 1795  ls
+ 1796  rm ConvolutionsModule.java 
+ 1797  cp Convolutions.java /home/19983530/Documents/PDI/P05/AssignmentTask/ConvolutionsModule.java
+ 1798  ls
+ 1799  vim ConvolutionsModule.java 
+ 1800  javac ConvolutionsModule.java 
+ 1801  vim ConvolutionsModule.java 
+ 1802  javac ConvolutionsModule.java 
+ 1803  java ConvolutionsModule 
+ 1804  vim ConvolutionsModule.java 
+ 1805  javac ConvolutionsModule.java 
+ 1806  vim ConvolutionsModule.java 
+ 1807  javac ConvolutionsModule.java 
+ 1808  vim ConvolutionsModule.java 
+ 1809  javac ConvolutionsModule.java 
+ 1810  vim ConvolutionsModule.java 
+ 1811  javac ConvolutionsModule.java 
+ 1812  java ConvolutionsModule
+ 1813  vim ConvolutionsModule.java 
+ 1814  java ConvolutionsModule
+ 1815  javac ConvolutionsModule.java 
+ 1816  java ConvolutionsModule
+ 1817  javac ConvolutionsModule.java 
+ 1818  vim ConvolutionsModule.java 
+ 1819  javac ConvolutionsModule.java 
+ 1820  vim ConvolutionsModule.java 
+ 1821  javac ConvolutionsModule.java 
+ 1822  vim ConvolutionsModule.java 
+ 1823  javac ConvolutionsModule.java 
+ 1824  java ConvolutionsModule
+ 1825  vim ConvolutionsModule.java 
+ 1826  javac ConvolutionsModule.java 
+ 1827  vim ConvolutionsModule.java 
+ 1828  javac ConvolutionsModule.java 
+ 1829  vim ConvolutionsModule.java 
+ 1830  javac ConvolutionsModule.java 
+ 1831  vim ConvolutionsModule.java 
+ 1832  javac ConvolutionsModule.java 
+ 1833  java ConvolutionsModule
+ 1834  vim ConvolutionsModule.java 
+ 1835  javac ConvolutionsModule.java 
+ 1836  java ConvolutionsModule
+ 1837  vim ConvolutionsModule.java 
+ 1838  javac ConvolutionsModule.java 
+ 1839  vim ConvolutionsModule.java 
+ 1840  javac ConvolutionsModule.java 
+ 1841  vim ConvolutionsModule.java 
+ 1842  javac ConvolutionsModule.java 
+ 1843  java ConvolutionsModule
+ 1844  vim ConvolutionsModule.java 
+ 1845  javac ConvolutionsModule.java 
+ 1846  java ConvolutionsModule
+ 1847  vim ConvolutionsModule.java 
+ 1848  javac ConvolutionsModule.java 
+ 1849  java ConvolutionsModule
+ 1850  clear
+ 1851  cd Documents/PDI/P05/AssignmentTask/
+ 1852  vim Convolutions.java 
+ 1853  ls
+ 1854  vim ConvolutionsModule.java 
+ 1855  javac ConvolutionsModule.java 
+ 1856  java ConvolutionsModule 
+ 1857  mv ConvolutionsModule.java /home/19983530/Documents/PDI/P05/AssignmentTask/Convolutions.java
+ 1858  vim Convolutions.java 
+ 1859  javac ConvolutionsModule.java 
+ 1860  vim Convolutions.java 
+ 1861  javac Convolutions.java 
+ 1862  java Convolutions
+ 1863  vim Convolutions.java 
+ 1864  javac Convolutions.java 
+ 1865  java Convolutions
+ 1866  vim Convolutions.java 
+ 1867  javac Convolutions.java 
+ 1868  java Convolutions
+ 1869  vim Convolutions.java 
+ 1870  javac Convolutions.java 
+ 1871  java Convolutions
+ 1872  vim Convolutions.java 
+ 1873  javac Convolutions.java 
+ 1874  java Convolutions
+ 1875  ls
+ 1876  rm ConvolutionsModule.class 
+ 1877  ls
+ 1878  clear
+ 1879  cd Documents/PDI/
+ 1880  ls
+ 1881  cd P05
+ 1882  ls
+ 1883  cd AssignmentTask/
+ 1884  rm Convolutions.txt 
+ 1885  ls
+ 1886  cd ..
+ 1887  cd AssignmentTask/
+ 1888  vim Convolutions.txt
+ 1889  ls
+ 1890  rm Convolutions_Test.txt 
+ 1891  ls
+ 1892  cd ..
+ 1893  cd PDI/
+ 1894  ls
+ 1895  cp FileName_Test.txt /home/19983530/Documents/PDI/P05/AssignmentTask/Convolutions_Test.txt
+ 1896  cd P05/AssignmentTask/
+ 1897  ls
+ 1898  vim Convolutions_Test.txt 
+ 1899  cd Documents/PDI/P05/AssignmentTask/
+ 1900  vim Convolutions.java 
+ 1901  vim Convolutions_Test.txt
+ 1902  ls
+ 1903  vim Convolutions.java 
+ 1904  clear
+ 1905  cd Documents/PDI/P05/AssignmentTask/
+ 1906  vim Convolutions.java 
+ 1907  clear
+ 1908  cd Documents/PDI/P05/AssignmentTask/
+ 1909  vim Convolutions.java 
+ 1910  javac Convolutions.java 
+ 1911  java Connvolutions
+ 1912  java Convolutions
+ 1913  vim Convolutions.java 
+ 1914  java Connvolutions
+ 1915  javac Convolutions.java 
+ 1916  java Connvolutions
+ 1917  java Convolutions
+ 1918  vim Convolutions.txt 
+ 1919  vim Convolutions.java 
+ 1920  vim Convolutions.txt 
+ 1921  javac Convolutions.java 
+ 1922  java Convolutions
+ 1923  clear
+ 1924  history >home/19983530/Documents/PDI/P05/BashHistoryP05.txt
+ 1925  history >~/19983530/Documents/PDI/P05/BashHistoryP05.txt
+ 1926  history >~/Documents/PDI/P05/BashHistoryP05.txt
+ 1927  cd Documents/PDI/P05
+ 1928  cd ..
+ 1929  tar -cvzf 19983530_P05.tar.gz P05
+ 1930  clear
+ 1931  cd Documents/PDI/
+ 1932  ls
+ 1933  clear
+ 1934  cd Documents/PDI/
+ 1935  ls
+ 1936  rm 19983530_P05.tar.gz 
+ 1937  ls
+ 1938  cd P05
+ 1939  ls
+ 1940  cd AssignmentTask/
+ 1941  ls
+ 1942  rm .MatrixMultiplication.java.swp 
+ 1943  ls
+ 1944  cd ..
+ 1945  tar -cvzf 19983530_P05.tar.gz P05
+ 1946  clear
+ 1947  cd Downloads/
+ 1948  ls
+ 1949  vim DeclarationOfOriginalityPDI.pdf 
+ 1950  cd ..
+ 1951  tar -cvzf 19983530_form.tar.gz form
+ 1952  cd Downloads/
+ 1953  cd ..
+ 1954  cd Documents/
+ 1955  ls
+ 1956  cd PDI/
+ 1957  ls
+ 1958  mkdir TestAnswersDirectory
+ 1959  ls
+ 1960  cd TestAnswersDirectory/
+ 1961  cd ..
+ 1962  cd ../Downloads/
+ 1963  cp DeclarationOfOriginalityPDI.pdf /home/19983530/Documents/PDI/TestAnswersDirectory/
+ 1964  cd ../Documents/PDI/TestAnswersDirectory/
+ 1965  ls
+ 1966  cd ..
+ 1967  tar -cvzf 19983530_TestAnswers.tar.gz TestAnswersDirectory
+ 1968  ls
+ 1969  clear
+ 1970  cd Documents/PDI/
+ 1971  ls
+ 1972  cd TestAnswersDirectory/
+ 1973  ls
+ 1974  vim One.txt
+ 1975  vim Two.txt
+ 1976  vim Three.txt
+ 1977  vim Four.txt
+ 1978  vim Five.java
+ 1979  ls
+ 1980  cd ..
+ 1981  cd P05
+ 1982  cd Euler/
+ 1983  vim Euler.java 
+ 1984  clear
+ 1985  cd Documents/PDI/
+ 1986  cd TestAnswersDirectory/
+ 1987  ls
+ 1988  clera
+ 1989  clear
+ 1990  cd Documents/PDI/
+ 1991  ls
+ 1992  cd TestAnswersDirectory/
+ 1993  ls
+ 1994  clear
+ 1995  cd Documents/PDI/
+ 1996  ls
+ 1997  cd TestAnswersDirectory/
+ 1998  ls
+ 1999  rm Five.java 
+ 2000  ls
+ 2001  clear
+ 2002  cd Documents/PDI/
+ 2003  ls
+ 2004  cd TestAnswersDirectory/
+ 2005  ls
+ 2006  cd ..
+ 2007  ls
+ 2008  rm 19983530_TestAnswers.tar.gz 
+ 2009  ls
+ 2010  cd TestAnswersDirectory/
+ 2011  ls
+ 2012  clear
+ 2013  ls
+ 2014  vim Markup.java
+ 2015  javac Markup.java 
+ 2016  vim Markup.java
+ 2017  javac Markup.java 
+ 2018  vim Markup.java
+ 2019  javac Markup.java 
+ 2020  vim Markup.java
+ 2021  javac Markup.java 
+ 2022  vim Markup.java
+ 2023  javac Markup.java 
+ 2024  vim Markup.java
+ 2025  javac Markup.java 
+ 2026  vim Markup.java
+ 2027  javac Markup.java 
+ 2028  vim Markup.java
+ 2029  javac Markup.java 
+ 2030  vim Markup.java
+ 2031  javac Markup.java 
+ 2032  vim Markup.java
+ 2033  javac Markup.java 
+ 2034  vim Markup.java
+ 2035  javac Markup.java 
+ 2036  vim Markup.java
+ 2037  javac Markup.java 
+ 2038  java Markup 
+ 2039  vim Markup.java
+ 2040  javac Markup.java 
+ 2041  java Markup 
+ 2042  vim Markup.java
+ 2043  javac Markup.java 
+ 2044  java Markup 
+ 2045  vim Markup.java
+ 2046  javac Markup.java 
+ 2047  java Markup 
+ 2048  vim Markup.java
+ 2049  javac Markup.java 
+ 2050  java Markup 
+ 2051  vim Markup.java
+ 2052  javac Markup.java 
+ 2053  java Markup 
+ 2054  vim Markup.java
+ 2055  ls
+ 2056  vim Four.txt 
+ 2057  vim Markup.java
+ 2058  vim Four.txt 
+ 2059  vim Markup.java
+ 2060  vim Four.txt 
+ 2061  vim Markup.java
+ 2062  vim Four.txt 
+ 2063  ls
+ 2064  vim One.java
+ 2065  rm One.java 
+ 2066  vim One.txt 
+ 2067  vim Two.txt 
+ 2068  vim Three.txt 
+ 2069  vim Markup.java
+ 2070  javac Markup.java 
+ 2071  java Markup 
+ 2072  vim Four.txt 
+ 2073  vim Three.txt 
+ 2074  ls
+ 2075  vim One.txt 
+ 2076  vim Two.txt 
+ 2077  vim One.txt 
+ 2078  vim Three.txt 
+ 2079  vim Four.txt 
+ 2080  vim Markup.java 
+ 2081  cd `
+
+
+
+ 2082  cd ~
+ 2083  history >~ /Documents/PDI/TestAnswersDirectory/BashHistory.txt
+ 2084  cd Documents/PDI/
+ 2085  tar -cvzf 19983530_TestAnswers.tar.gz TestAnswersDirectory
+ 2086  cd ..
+ 2087  history >~/home/19983530/Documents/PDI/TestAnswersDirectory/BashHistory.txt
+ 2088  history >~/home/19983530/Documents/PDI/TestAnswersDirectory/BashHistoryTestAnswersDirectory.txt
+ 2089  history >~/home/19983530/Documents/PDI/TestAnswersDirectory/BashHistoryTestAnswers.txt
+ 2090  history >~/Documents/PDI/TestAnswersDirectory/BashHistoryTestAnswers.txt
+ 2091  cd Documents/PDI/TestAnswersDirectory/
+ 2092  cd ..
+ 2093  ls
+ 2094  rm 19983530_TestAnswers.tar.gz 
+ 2095  ls
+ 2096  cd ..
+ 2097  rm BashHistoryTestAnswers.txt
+ 2098  rm -rf BashHistoryTestAnswers.txt
+ 2099  history >~/Documents/PDI/TestAnswersDirectory/BashHistory.txt

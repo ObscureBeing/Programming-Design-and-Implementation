@@ -1,0 +1,192 @@
+START UserInterface
+
+    MAIN :
+
+    UserInterface <-- "Enter a integer(int) between 6 and 100 inclusive", 6, 100
+    UserInterface <-- "Enter a integer(long) between 200000 and 300000 inclusive", 200000, 300000
+    UserInterface <-- "Enter a real(float) between 1.5 and 10.5 inclusive", 1.5, 10.5
+    UserInterface <-- "Enter a real(double) between 200.50 and 500.50 inclusive", 200.50, 500.50
+    UserInterface <-- "Enter a character between a and k inclusive", a, k
+    UserInterface <-- "Enter a character between M and Z inclusive", M, Z
+    UserInterface <-- "Enter a name : "
+
+    END MAIN
+    
+    SUBMODULE : userInput
+    IMPORT : prompt(String), lower(Integer), upper(Integer)
+    EXPORT : num(Integer)
+    ASSERTION : num will be in the range of lower and upper inclusive and exceptions will be catched.
+    ALGORITHM :
+        outputPrompt := prompt
+        DO
+            SUBMODULE : TRY
+            IMPORT : none
+            EXPORT : none
+                OUTPUT outputPrompt + " between " + upper + " and " + lower
+                INPUT num(Integer)
+            END TRY
+            
+            SUBMODULE : CATCH
+            IMPORT : e(InputMismatchException)
+            EXPORT : none 
+                num := lower - 1
+                displayError <-- e.getMessage<--none
+            END CATCH
+
+            outputPrompt := "ERROR: please enter a a valid value NEWLINE + prompt
+        WHILE(num < lower OR num > upper) 
+
+    END userInput
+
+    SUBMODULE : userInput
+    IMPORT : prompt(String), lower(Real), upper(Real)
+    EXPORT : num(Real)
+    ASSERTION : num will be in the range of lower and upper inclusive and exceptions will be catched.
+    ALGORITHM :
+        outputPrompt := prompt
+        DO
+            SUBMODULE : TRY
+            IMPORT : none
+            EXPORT : none
+                OUTPUT outputPrompt + " between " + upper + " and " + lower
+                INPUT num(Real)
+            END TRY
+            
+            SUBMODULE : CATCH
+            IMPORT : e(InputMismatchException)
+            EXPORT : none 
+
+                num := lower - 1.0
+                displayError <-- e.getMessage<--none
+            END CATCH
+
+            outputPrompt := "ERROR: please enter a a valid value NEWLINE + prompt
+        WHILE(num < lower OR num > upper) 
+
+    END userInput
+
+    SUBMODULE : userInput
+    IMPORT : prompt(String), lower(Integer), upper(Integer)
+    EXPORT : num(Integer)
+    ASSERTION : num will be in the range of lower and upper inclusive and exceptions will be catched.
+    ALGORITHM :
+        outputPrompt := prompt
+        DO
+            SUBMODULE : TRY
+            IMPORT : none
+            EXPORT : none
+                OUTPUT outputPrompt + " between " + upper + " and " + lower
+                INPUT num(Integer)
+            END TRY
+            
+            SUBMODULE : CATCH
+            IMPORT : e(InputMismatchException)
+            EXPORT : none 
+
+                num := lower - 1
+                displayError <-- e.getMessage<--none
+            END CATCH
+
+            outputPrompt := "ERROR: please enter a a valid value NEWLINE + prompt
+        WHILE(num < lower OR num > upper) 
+
+    END userInput
+
+    SUBMODULE : userInput
+    IMPORT : prompt(String), lower(Real), upper(Real)
+    EXPORT : num(Real)
+    ASSERTION : num will be in the range of lower and upper inclusive and exceptions will be catched.
+    ALGORITHM :
+        outputPrompt := prompt
+        DO
+            SUBMODULE : TRY
+            IMPORT : none
+            EXPORT : none
+                OUTPUT outputPrompt + " between " + upper + " and " + lower
+                INPUT num(Real)
+            END TRY
+            
+            SUBMODULE : CATCH
+            IMPORT : e(InputMismatchException)
+            EXPORT : none 
+
+                num := lower - 1.0
+                displayError <-- e.getMessage<--none
+            END CATCH
+
+            outputPrompt := "ERROR: please enter a a valid value NEWLINE + prompt
+        WHILE(num < lower OR num > upper) 
+
+    END userInput
+
+    SUBMODULE : userInput
+    IMPORT : prompt(String), lower(Character), upper(Character)
+    EXPORT : value(Character)
+    ASSERTION : value will be in the range of lower and upper inclusive and exceptions will be catched.
+    ALGORITHM :
+        value := SPACE or EMPTY
+        outputPrompt := prompt
+        DO
+            SUBMODULE : TRY
+            IMPORT : none
+            EXPORT : none
+                OUTPUT outputPrompt + " between " + upper + " and " + lower
+                INPUT value(Character)
+            END TRY
+            
+            SUBMODULE : CATCH
+            IMPORT : e(InputMismatchException)
+            EXPORT : none 
+
+                charVar := (Convert to Integer)lower - 1
+                displayError <-- e.getMessage<--none
+            END CATCH
+
+            outputPrompt := "ERROR: please enter a a valid value NEWLINE + prompt
+        WHILE(num < lower OR num > upper) 
+
+    END userInput
+
+    SUBMODULE : userInput
+    IMPORT : prompt(String)
+    EXPORT : value(String)
+    ASSERTION : will input value and exceptions will be catched.
+    ALGORITHM :
+        value := EMPTY
+        outputPrompt := prompt
+        
+            SUBMODULE : TRY
+            IMPORT : none
+            EXPORT : none
+                OUTPUT outputPrompt 
+                INPUT value(String)
+            END TRY
+            
+            SUBMODULE : CATCH
+            IMPORT : e(Input Mismatch Exception)
+            EXPORT : none 
+
+                displayError <-- e.getMessage<--none
+            END CATCH
+    END userInput
+
+    SUBMODULE : displayError
+    IMPORT : error(String)
+    EXPORT : none
+    ASSERTION : will display the error messages of exceptions catched.
+    ALGORITHM :
+        OUTPUT "ERROR: Please check your input "
+        OUTPUT error
+
+    END displayError
+
+    SUBMODULE: display
+    IMPORT: output(String)
+    Expory: none
+    ASSERTION: will display the message.
+        OUTPUT output
+    END display
+
+END UserInterface
+
+

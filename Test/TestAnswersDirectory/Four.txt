@@ -1,0 +1,91 @@
+START Markup
+    MAIN:
+    numberOfTerms := inputN <-- "Please enter a number between 2 and 35(inclusive 2 and 35)", 2, 35, sc
+    precissionK := inputK <-- "Please enter a number between 5 and 100 (inclusive 5 and 100)", 5, 100, sc
+    array(ARRAY OF Real OF SIZE numberOfTerms+1)
+    
+    FOR ii := 0 TO numberOfTerms(EXCLUSIVE) INC BY 1
+        array[ii] := calcTerm <-- ii, numberOfTerms, precissionK
+    END FOR
+
+    array[numberOfTerms] := calcMarkup <-- array
+    outputArrayContents <-- array
+    END MAIN
+
+    SUBMODULE: inputN
+    IMPORT: prompt(String), lower(Integer), upper(Integer), sc(Scanner) (OBJECT OF CLASS SCANNER)
+    EXPORT: value(Integer)
+    ASSERTION: input value in the range of lower and upper inclusive.
+    ALGORITHM:  
+        outputPrompt := prompt
+        DO
+            OUTPUT outputPrompt
+            INPUT value(Integer)
+            outputPrompt := "Error, please enter number in the valid range NEWLINE" + prompt
+        WHILE(value < lower OR value > upper)
+    END inputN
+
+    SUBMODULE: inputK
+    IMPORT: prompt(String), lower(Integer), upper(Integer), sc(Scanner) (OBJECT OF CLASS SCANNER)
+    EXPORT: value(Integer)
+    ASSERTION: input value in the range of lower and upper inclusive.
+    ALGORITHM:  
+        outputPrompt := prompt
+        DO
+            OUTPUT outputPrompt
+            INPUT value(Integer)
+            outputPrompt := "Error, please enter number in the valid range NEWLINE" + prompt
+        WHILE(value < lower OR value > upper)
+    END inputK
+
+    SUBMODULE: calcTerm
+    IMPORT: i(Integer), n(Integer), k(Integer)
+    EXPORT: term(Integer)
+    ASSERTION: calculates value of each term.
+    ALGORITHM:
+        term := 0
+        FOR jj := i TO n(exclusive) INC BY 1
+            top := ((convert to Real) Math.pow <-- i+1, 2) * (calcJ <-- k) + 1.0
+            bottom := 4.0 * (convert to Real) n * (convert to Real) k
+            term := (convert to Real) top DIV (convert to Real) bottom
+        END FOR
+    END calcTerm
+
+    SUBMODULE: calcJ
+    IMPORT: k(Integer)
+    EXPORT: value(integer)
+    ASSERTION: calculates value of j.
+    ALGORITHM:
+        value := 0.0
+        FOR j := 1 TO k(INCLUSIVE) INC BY 1
+            value := value * j
+        END FOR
+    END calcJ
+
+    SUBMODULE: calcMarkup
+    IMPORT: array(ARRAY OF Real)
+    EXPORT: sum(Real)
+    ASSERTION: calculates value of makup constant by calculating sum of all individual terms.
+    ALGORITHM:
+        sum := 0.0
+        FOR kk := 0 TO SIZE OF array(EXCLUSIVE) INC BY 1
+            sum = sum + array[kk]
+        END FOR
+    END calcMarkup
+
+    SUBMODULE: outputArrayContents
+    IMPORT: array(ARRAY OF Real
+    EXPORT: none
+    ASSERTION: will output all the elements of the array to the screen.
+    ALGORITHM:
+        FOR count := 0 TO SIZE OF array(EXCLUSIVE) INC BY 1
+        OUTPUT array[count]  + SPACE
+        END FOR
+
+        OUTPUT NEWLINE
+
+    END outputArrayContents
+
+END Markup
+
+    

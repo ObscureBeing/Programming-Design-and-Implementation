@@ -1,0 +1,179 @@
+START PDIMath
+
+    SUBMODULE: min
+    IMPORT: a(Integer),b(Integer)
+    EXPORT: minVar(Integer)
+    ASSERTION: Calculates minimum of two integers
+    ALGORITHM:
+        minVar := a
+        IF(b<a)
+            minVar := b
+    END min
+
+    SUBMODULE: min
+    IMPORT: a(Real),b(Real)
+    EXPORT: minVar(Real)
+    ASSERTION: Calculates minmum of 2 given reals.
+    ALGORITHM:
+        minVar := a
+        IF(b<a)
+            minVar := b
+ 
+    END min
+
+    SUBMODULE: min
+    IMPORT: a(Integer),b(Integer)
+    EXPORT: minVar(Integer)
+    ASSERTION: calculates minimum of two long integers.
+    ALGORITHM:
+        minVar := a
+        IF(b<a)
+            minVar := b
+ 
+    END min
+
+    SUBMODULE: min
+    IMPORT: a(Real), b(Real)
+    EXPORT: minVa(Real)
+    ASSERTION: calculates minimum of 2 given float (Reals)
+    ALGORITHM:
+        minVar := a
+        IF(b<a)
+            minVar := b
+ 
+    END min
+
+    SUBMODULE: max
+    IMPORT: a(Integer), b(Real)
+    EXPORT: maxVar(Integer)
+    ASSERTION: calculates maximum of two integers.
+    ALGORITHM:
+        maxVar := a
+        IF(b>a)
+            maxVar := b
+ 
+    END max
+
+    SUBMODULE: max
+    IMPORT: a(Real), b(Real)
+    EXPORT: maxVar(Real)
+    ASSERTION: calculates maximum of two reals.
+    ALGORITHM:
+        //Same as max with Integer imports and exports.
+    END max
+
+    SUBMODULE: abs
+    IMPORT: a(Integer)
+    EXPORT: a(Integer)
+    ASSERTION: caculates absolute value of integer.
+    ALGORITHM:
+        IF(a<0)
+            a := -1
+    END abs
+
+    SUBMODULE: abs
+    IMPORT: a(Real)
+    EXPORT: a(Real)
+    ASSERTION: calculates absolute value of Real.
+    ALGORITHM:
+        //same as abs with Integer imports.
+    END abs
+
+    SUBMODULE: floor
+    IMPORT: a(Real)
+    EXPORT: floorVar(Real)
+    ASSERTION: calculates the floor value of real.
+    ALGORITHM:
+        IF( a>= 0.0)
+            IF( a EQUALS a / 0.0)
+                floorVar:= a/ 0.0
+            ELSE
+                floorVar:= (Convert to Integer) a
+            END IF
+        ELSE
+            IF(a MOD 10 EQUALS 0)
+                floorVar := (Convert to Integer)a
+            ELSE
+                floorVar := (Convert to Integer) - 1
+            END IF
+        END IF
+        
+    END floor
+
+    SUBMODULE: ceil
+    IMPORT: a(Real)
+    EXPORT: ceilVar(Real)
+    ASSERTION: calculates ceil value.
+    ALGORITHM:
+        IF( a>= 0.0)
+            IF( a EQUALS a / 0.0)
+                ceilVar:= a/ 0.0
+            ELSE
+                IF(a MOD 10 EQUALS 0)
+                    ceilVar := (Convert to Integer) a
+                ELSE
+                    ceilVar := (Convert to Integer) a + 1
+                END IF
+            END IF
+            
+        ELSE
+            IF(a EQUALS -a / 0.0
+                ceilVar := -a/0.0
+            ELSE
+                ceilVar := (Convert to Integer)a
+            END IF
+ 
+    END ceil
+
+    SUBMODULE: pow
+    IMPORT: base(Real), exponent(Real)
+    EXPORT: powVar(Real)
+    ASSERTION: calculates exponent to value.
+    ALGORITHM:
+        powVar := 1
+        IF(exponent >= 0)
+            FOR ii:=0 TO exponent(EXCLUSIVE) INC BY 1
+                powVar := powVar + base
+            END FOR
+        ELSE
+        exponent := abs <-- exponent
+        FOR jj:=0 TO exponent(EXCLUSIVE) INC BY 1
+            powVar := PowVar * (1/base)
+        END FOR
+
+        END IF
+    END pow
+
+    SUBMODULE: pi
+    IMPORT: precision(Integer)
+    EXPORT: piVar * 4(Real)
+    ASSERTION: calculates pi upto given precision.
+    ALGORITHM:
+        piVar := 0.0
+        FOR ii:=0 TO precision(EXCLUSIVE) INC BY 1
+            top := pow <-- -1, ii
+            piVar := piVar + ((2 * (convert to REAL) ii) + 1)
+    END pi
+
+    SUBMODULE: e
+    IMPORT: precision(Integer)
+    EXPORT: eVar(Real)
+    ASSERTION: calculates value of e upto given precision.
+    ALGORITHM:
+        eVar := 0
+        FOR ii:=0 TO precision(EXCLUSIVE) INC BY 1
+            eVar := eVar + 1.0 / (convert to REAL) calcFactorial <--ii
+    END e
+
+    SUBMODULE: calcFactorial
+    IMPORT: n(Integer)
+    EXPORT: fact(Integer)
+    ASSERTION: calculates factorial of n.
+    ALGORITHM:
+        fact := 1
+        FOR jj:=2 TO n(INCLUSIVE) INC BY 1
+            fact := fact * jj
+        END FOR
+    End calcFactorial
+
+END PDIMath 

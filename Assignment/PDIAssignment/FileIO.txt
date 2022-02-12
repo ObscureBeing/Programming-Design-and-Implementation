@@ -1,0 +1,139 @@
+/**************************************************
+* Reference: Taken from my submitted worksheet-8. *
+***************************************************
+
+START FileIO
+
+    SUBMODULE : readFile
+    IMPORT : inFileName(String)
+    EXPORT : myArray(2D ARRAY OF Integer)
+    ASSERTION : will read a csv file in 2D array and will return it.
+    ALGORITHM :
+        theFile := OPENFILE filename
+        lineNum :=0
+        INPUT line FROM theFile
+        TRY
+            IF(line NOT EQUALS null)
+                myLine := line.split <-- ,
+                colSize := myLine.length
+            END IF
+
+            WHILE (theFile NOT EQUALS EOF) AND (colSize EQUALS myLine.length)
+                lineNum := lineNum + 1
+                myLine := line.split <-- ,
+                INPUT line FROM theFile
+            END WHILE
+
+            myArray(2D ARRAY OF Integer OF SIZE lineNum, colSize)
+
+            OUTPUT "No. of rows : " + lineNum
+            OUTPUT "No. of columns : " + colSize
+
+            myArray := inputArrayValues <-- myArray, inFileName
+
+            CLOSEFILE theFile
+        END TRY
+
+        CATCH
+            IF(theFile NOT EQUALS null)
+                TRY
+                    CLOSEFILE theFile
+                END TRY
+                CATCH
+                ENDCATCH
+            END IF
+
+            UserInterface.displayError <-- "Error in File processing. " + e.getMessage <-- none
+        END CATCH
+        
+    END readFile
+
+    SUBMODULE : inputArrayValues
+    IMPORT : myArray(2D ARRAY OF TYPE Integer), inFileName(String)
+    EXPORT : myArray(2D ARRAY OF TYPE Integer).
+    ASSERTION : will put values of csv file in 2D array.
+    ALGORITHM :
+        theFile := OPENFILE theFile
+        TRY
+            
+            
+            WHILE NOT (theFile = EOF)
+                myLine := line.split <-- ,
+                
+                FOR col:=0 TO myArray[0] SIZE INC BY 1
+                    myArray[lineNum][col] := Integer.parseInt <-- myLine[col];
+                END FOR
+
+                lineNum := lineNum+1
+                INPUT line FROM theFile
+            END WHILE
+        
+            CLOSEFILE theFile
+        END TRY
+        CATCH
+            IF(theFile NOT EQUALS null)
+                TRY
+                    CLOSEFILE theFile
+                END TRY
+                CATCH
+                ENDCATCH
+            END IF
+
+            UserInterface.displayError <--  "Error in File processing. " + e.getMessage <-- none
+        END CATCH
+ 
+
+    END inputArrayValues
+
+
+    SUBMODULE : writeFile
+    IMPORT : filename(String), writeArray(2D ARRAY OF TYPE Integer)
+    EXPORT : none
+    ASSERTION : will write a 2D array on a file.
+    ALGORITHM :
+        theFile := OPENFILE theFile
+        TRY
+            FOR ii:=0 TO LENGTH OF writeArray INC BY 1
+                FOR jj:=0 TO writeArray[ii](COLUMN SIZE) INC BY 1
+                    WRITE writeArray[ii][jj] + ","
+                END FOR
+            WRITE NEWLINE
+            END FOR
+
+            CLOSEFILE theFile
+        END TRY
+        CATCH
+            IF(theFile NOT EQUALS null)
+                TRY
+                    CLOSEFILE theFile
+                END TRY
+                CATCH
+                ENDCATCH
+            END IF
+
+            UserInterface.displayError <-- "Error in File processing. " + e.getMessage <-- none
+        END CATCH
+
+  END writeFile
+
+    SUBMODULE : readPNG
+    IMPORT : fileName(String)
+    EXPORT : image(2D ARRAY OF TYPE Integer)
+    ASSERTION : will read a PNG file.
+    ALGORITHM :
+        // Take from Worksheet-8 //
+    END readPNG
+
+
+    SUBMODULE : writePNG
+    IMPORT : fileName(String), writeArray(2D ARRAY OF TYPE Integer)
+    EXPORT : none
+    ASSERTION : will write a PNG file.
+    ALGORITHM :
+        // Taken from Worksheet-8 //
+    END writePNG
+
+END FileIO
+
+
+

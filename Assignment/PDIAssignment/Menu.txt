@@ -1,0 +1,224 @@
+START Menu
+
+    SUBMODULE: importImage
+    IMPORT: sc (OBJECT OF Scanner)
+    EXPORT: array (2D ARRAY OF Integer)
+    ASSERTION: allows to import image by displaying menu from either file or manually.
+    ALGORITHM:
+        array := null
+        UserInterface.display <-- "How you want to get the image? NEWLINE
+        UserInterface.display <-- "1.From File NEWLINE
+        UserInterface.display <-- "2.Manually input NEWLINE
+        choice := UserInterface.userInput <-- "Please enter (inclusive)", 1, 2
+
+        CASE choice
+        1:
+        array := menu <-- sc
+
+        2:
+        array := userInputImage <-- sc
+
+        DEFAULT :
+        UserInterface.display <-- "Please choose a valid option."
+        END CASE
+        
+    END importImage   
+
+    SUBMODULE: menu
+    IMPORT: sc (OBJECT OF Scanner)
+    EXPORT: imageArray (2D ARRAY OF Integer)
+    ASSERTION: Allows the user to chose image in different file format and reads accordingly.
+    ALGORITHM:
+        imageArray := null
+        UserInterface.display <-- "What file would you like to choose? NEWLINE
+        UserInterface.display <-- "(C)SV NEWLINE"
+        UserInterface.display <-- "(P)NG NEWLINE"
+
+        option := UserInterface.userInput <-- "Please enter (c)(C) or (p)(P)", C, P
+
+        CASE option
+        'c': 'C':
+        UserInterface.display <--- "Please enter the filename of the CSV with(.csv) extension : "
+        csvFile := UserInterface.userInput<-- SPACE
+        imageArray := FileIO.readFile <-- csvFile
+
+        'p': 'P':
+        userInterface.display <-- "Please enter the filename of the PNG with(.png) extension : "
+        pngFile := UserInterface.userInput <-- SPACE
+        imageArray := FileIO.readPNG <-- pngFile
+
+        DEFAULT:
+        UserInterface.display <-- "Please enter valid file type. NEWLINE
+        END CASE
+    END menu
+
+    SUBMODULE: userInputImage
+    IMPORT: sc (OBJECT OF Scanner)
+    EXPORT: myImage (2D ARRAY OF Integer)
+    ASSERTION: inputs image by user manually when user chooses to do so from the menu.
+    ALGORITHM:
+        UserInterface.display <-- "Please enter in the x-dimension: "
+        cols := UserInterface.userInput <-- "Image's size will be validated in Image class.", 0, 2147483647
+        UserInterface.display <-- "Please enter in the y dimension: "
+        rows := UserInterface.userInput <-- "Image's size will be validated in Image class.", 0, 2147483647
+
+        myImage (2D ARRAY OF ROW SIZE AS rows AND COLUMN SIZE AS cols)
+
+        UserInterface.display <-- "These ccoordinates are (x,y) NEWLINE"
+    
+        FOR col:=0 TO cols INC BY 1
+            FOR row:=0 TO rows INC BY 1
+                UserInterface.display <-- "(" + (col+1) + "," + (row+1) + ") : "
+                myImage[row][col] := UserInterface.userInput <--"Please enter values (inclusive) for (" + (col+1) + "," + (row+1) + ") :",0, 255
+            END FOR
+        END FOR       
+    END userInputImage
+
+    SUBMODULE: importKernel
+    IMPORT: sc (OBJECT OF Scanner)
+    EXPORT: kernelArray (2D ARRAY OF Integer)
+    ASSERTION: Allows user to choose the option for importing kernel either from file or manually.
+    ALGORITHM:
+        kernelArray := null
+        UserInterface.display <-- "How you want to get the kernel? NEWLINE
+        UserInterface.display <-- "1.File (.csv) NEWLINE"
+        UserInterface.display <-- "2.Manually input NEWLINE" 
+        choice := UserInterface.userInput <-- "Either 1 or 2.",1,2
+
+        CASE choice
+        1:
+        UserInterface.display <-- "Please enter the filename of the CSV : "
+        csvFile := UserInterface.userInput <-- "with(.csv) as extension"
+        kernelArray := FileIO.readFile <-- csvFile
+
+        2:
+        kernelArray := userInputKernel <-- sc
+
+        END CASE       
+    END importKernel
+
+    SUBMODULE: userInputKernel
+    IMPORT: sc (OBJECT OF Scanner)
+    EXPORT: myKernel (2D ARRAY OF Integer)
+    ASSERTION: Allows user to import kernel manually.
+    ALGORITHM:
+        UserInterface.display <-- "Please enter in the kernel size k: "
+        size := UserInterface.userInput <-- It will be validated to be less than image's size", 0, 2147483647
+
+        myKernel (2D ARRAY OF SIZE size)
+
+        UserInterface.display <-- "These Coordinates are (x,y) NEWLINE"
+    
+        FOR ii:=0 TO SIZE(EXCLUSIVE) INC BY 1
+            FOR jj:=0 TO SIZE(EXCLUSIVE) INC BY 1
+                UserInterface.display <-- "(" + (ii+1) + "," + (jj+1) + ") : "
+                myKernel[ii][jj] = UserInterface.userInput <-- SPACE, -2147483648, 2147483647
+            END FOR
+        END FOR
+    END userInputKernel
+
+    SUBMODULE: convolution
+    IMPORT: myImage(OBJECT OF Image), kernel (2D ARRAY OF Integer)
+    EXPORT: convolutedImage (2D ARRAY OF Integer)
+    ASSERTION: will performm convolution on the image and kernel imported.
+    ALGORITHM:
+        convolutedImage := myImage.convolution <-- kernel
+    END convolution
+
+    SUBMODULE: exportImage
+    IMPORT: resultArray (2D ARRAY OF Integer), sc (OBJECT OF Scanner)
+    EXPORT: none
+    ASSERTION: writes the result on file according to the format chosen that is, CSV or PNG.
+    ALGORITHM:
+        UserInterface.display <-- "Please enter the File name to be saved with :"
+        fileName := UserInterface.userInput <-- SPACE
+        UserInterface.display <-- "What filetype would you like to sace with? (C)SV or (P)NG: "
+        INPUT choice(Character)
+
+        CASE choice
+        'c': 'C':
+        UserInterface.display <-- "Please enter a date to save with in (DDMMYYYY) format: "
+        date := UserInterface.userInput <-- SPACE, 00000000, 99999999
+        subFileName := splitDate <-- date
+        writeFileName := subFileName + "_Processed_" + fileName + ".csv"
+        FileIO.writeFile <-- writeFileName, resultArray
+        UserInterface.display <-- "File " + "(" + writeFileName + ") NEWLINE"
+
+        'p': 'P':
+        UserInterface.display <-- "Please enter a date to save with in (DDMMYYYY) format: "
+        date := UserInterface.userInput <-- SPACE, 00000000, 99999999
+        subFileName := splitDate <-- date
+        writeFileName := subFileName + "_Processed_" + fileName + ".png"
+        FileIO.writePNG <-- writeFileName, resultArray
+        UserInterface.display <-- "File " + "(" + writeFileName + ") NEWLINE"
+
+        DEFAULT:
+        UserInterface.display <-- "Invalid File Type NEWLINE"
+        
+        END CASE
+    END exportImage
+
+    SUBMODULE: splitDate
+    IMPORT: date (Integer)
+    EXPORT: subName (String)
+    ASSERTION: splits the date in its components and return the formatted date to save file with.
+    ALGORITHM:
+        day := date DIV 1000000
+        date := date MOD 1000000
+
+        month := date DIV 10000
+
+        year := date MOD 10000
+
+        newDate(OBJECT OF Date) := Date <-- day, month, year
+        subName := newDate.toFileString <-- none
+    END splitDate
+
+    SUBMODULE: smoothing
+    IMPORT: myImage (2D ARRAY OF Integer)
+    EXPORT: myImage(2D ARRAY OF Integer)
+    ASSERTION: Performs smoothing operation on the imported image.
+    ALGORITHM:
+        counter := 1
+        sum := 0.0
+        outputprompt := "Please enter a smoothing sirface (odd) : "
+        
+        DO
+            UserInterface.display <-- outputPrompt + NEWLINE
+            smoothSurface := UserInterface.userInput <-- "Odd less than Image's length -1 to account boundaries : ", 1, 101
+            outputPrompt := "Eror," + outputPrompt
+        WHILE (smoothSurface MOD 2 EQUALS 0)
+
+        UserInterface.display <-- "Please enter a pixel to smooth (x,y): "
+        UserInterface.display <-- "Enter x coordinate :"
+        INPUT pixelX(Integer)
+        UserInterface.display <-- "Enter y coordinate :"
+        INPUT pixelY(Integer)
+        UserInterface.display <-- "Please enter a smoothness factor between 0 and 1 (inclusive): "
+        smoothFactor := UserInterface.userInput <-- SPACE, 0.0, 1.0
+        valueZ := (smoothSurface-1) DIV 2
+
+        minX := pixelX - valueZ
+        minY := pixelY - valueZ
+
+        maxX := pixelX + valueZ
+        maxY := pixelY + valueZ
+
+        FOR i:=minX TO maxX(INCLUSIVE) INC BY 1
+            FOR j:=minY to maxY(INCLUSIVE) INC BY !
+                sum := sum + myImage[i][j] * smoothFactor
+                counter := counter + 1
+            END FOR
+        END FOR
+
+        avg := sum / counter
+        smoothValue := (Convert TO Integer) PDIMath.ceil <-- avg
+
+        FOR ii:= minX TO maxX(INCLUSIVE) INC BY 1
+            FOR jj:=minY TO maxY(INCLUSIVE) INC BY 1
+                myImage[ii][jj] := smoothValue
+            END FOR
+        END FOR
+    END smoothing
+
+END Menu
