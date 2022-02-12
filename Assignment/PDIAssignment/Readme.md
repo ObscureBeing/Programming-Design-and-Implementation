@@ -1,4 +1,4 @@
-DetectEdges.java,
+# DetectEdges.java,
 This project is to detect horizontal and vertical lines in a PNG (Portabe Network Graphic).
 
 The program has various options to perform certain functions. They are:-
@@ -10,25 +10,24 @@ The program has various options to perform certain functions. They are:-
 5. Performs convolution or smoothing according to the option chosen.
 
 Files:-
-=> DetectEdges.java
-=> DetectEdges.txt
-=> Menu.java
-=> Menu.txt
-=> FileIO.java
-=> FileIO.txt
-=> PDIMath.java
-=> PDIMath.txt
-=> UserInterface.java
-=> UserInterface.txt
-=> Image.java
-=> Image.txt
-=> ImageTestHarness.java
-=> Date.java
-=> Date.txt
-=> DateTestHarness.java
+* DetectEdges.java
+* DetectEdges.txt
+* Menu.java
+* Menu.txt
+* FileIO.java
+* FileIO.txt
+* PDIMath.java
+* PDIMath.txt
+* UserInterface.java
+* UserInterface.txt
+* Image.java
+* Image.txt
+* ImageTestHarness.java
+* Date.java
+* Date.txt
+* DateTestHarness.java
 
-Instruction:-
 To run the program, DetectEdges is the entry point so use the following command-
-java DetectEdges
+* java DetectEdges
 
 AND SEE THE MAGICAL RESULT OF CONVOLUTION AND SMOOTHING.
